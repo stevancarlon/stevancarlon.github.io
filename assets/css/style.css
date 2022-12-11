@@ -519,6 +519,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .portfolio #portfolio-flters {
@@ -571,8 +572,15 @@ section {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+  background-image: url('code_on_github.png');
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+.portfolio .grp-div::before {
+  background-image: none;
+}
 .portfolio .portfolio-wrap .portfolio-links {
   opacity: 1;
   left: 0;
@@ -1101,4 +1109,34 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+.pushable {
+  background:  rgb(99, 144, 123);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background:  rgb(117, 170, 146);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
 }
