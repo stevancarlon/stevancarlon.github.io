@@ -29,8 +29,18 @@
 
   <script type="text/javascript">
     window.onload = function() {
-      window.location.href = "ween://Register";
-    };
+            // Get the token from the URL query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+
+            if (token) {
+                // Construct the deep link URL with the token
+                const deepLink = `myapp://register?token=${token}`;
+
+                // Redirect to the deep link
+                window.location.href = deepLink;
+            } 
+        };
   </script>
 
   <!-- =======================================================
